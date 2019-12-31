@@ -14,8 +14,12 @@ The following **required** functionality is completed:
 - [x] Works across both andriod and iOS. 
 
 
-## Video Walkthrough
+## Video Walkthrough - iOS
 
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/iq2ag2Y3bT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+## Video Walkthrough - iOS
+
+<img src='http://g.recordit.co/kOjsIYFNKn.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
