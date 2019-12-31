@@ -12,7 +12,9 @@ export default function App() {
   const addUserGoalHandler = goalTitle => {
     setCourseGoals(currentGoals => [...courseGoals,
     { id: Math.random().toString(), value: goalTitle }])
+    setIsModalVisiable(false)
   };
+
 
   const removeGoalHandler = goalId => {
     setCourseGoals(courseGoals => {
@@ -25,14 +27,16 @@ export default function App() {
 
   return (
     <View style={styles.mainContainer}>
-      <Button title="Add New Goal" onPress={() => setIsModalVisiable(true)}/>
-      <GoalInput visible={ismodalVisable} onAddGoal={addUserGoalHandler} />
+      <View style = {styles.buttonView}>
+        <Button title="Add New Goal" onPress={() => setIsModalVisiable(true)} />
+      </View>
+      <GoalInput visible={ismodalVisable} onAddGoal={addUserGoalHandler} onCancel={()=>setIsModalVisiable(false)} />
       <FlatList
         style={styles.scrollContainer}
         data={courseGoals}
         keyExtractor={(item, index) => item.id}
         renderItem={itemData =>
-          <GoalItem title={itemData.item.value} id={itemData.item.id} onDelete={removeGoalHandler}/>}
+          <GoalItem title={itemData.item.value} id={itemData.item.id} onDelete={removeGoalHandler} />}
       />
     </View >
   );
@@ -41,10 +45,15 @@ export default function App() {
 const styles = StyleSheet.create({
 
   scrollContainer: {
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
-  mainContainer :{
-    paddingTop :100
+  mainContainer: {
+    paddingTop: 100
+  },
+  buttonView:{
+    alignItems:'center'
+    
+
   }
 
 });
