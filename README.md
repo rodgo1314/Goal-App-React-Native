@@ -20,6 +20,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/iq2ag2Y3bT.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-## Video Walkthrough - iOS
+## Video Walkthrough - Andriod
 
 <img src='http://g.recordit.co/kOjsIYFNKn.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
